@@ -34,6 +34,7 @@ class InnerInheritance extends InnerInheritance_1{
 class InnerInheritance_1 extends InnerInheritance_2{
     InnerInheritance_1(){
         System.out.println("paraent of Innerinheritance");
+        super.show();
     }
     void show(){
         System.out.println("midddle class");

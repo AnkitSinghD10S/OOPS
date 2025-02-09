@@ -1,7 +1,13 @@
 # Inheritance
 
 
+   ## Super
+   > use of super key word
 
+      - To invoke parent class variable.
+      - To invoke parent class method. 
+      - To invoke parent class constructor.
+      
 
 
 
@@ -14,12 +20,10 @@ An interface is a set of abstract methods you would want your class to implement
     - An interface can be used when we want to achieve 100% abstraction. On the
     other hand, abstract classes can be used to achieve anything between 0—100%
     abstraction.    
-    An interface cannot have constructors because we cannot create objects of an
+    - An interface cannot have constructors because we cannot create objects of an
     interface.
-    If you want a class to achieve multiple inheritances, there is only one way:
-    interfaces.
-    If an interface is made private, or if the methods in it are made private or
-    protected, then a compilation error will be thrown.
+    - If you want a class to achieve multiple inheritances, there is only one way:interfaces.
+    - If an interface is made private, or if the methods in it are made private or protected, then a compilation error will be thrown.
 
 
 
