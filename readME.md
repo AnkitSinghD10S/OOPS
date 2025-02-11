@@ -1,13 +1,16 @@
 # Inheritance
 
+### Hierarchical Inheritance
 
-   ## Super
+    When more than one class is inherited from a single base class, we call it Hierarchical Inheritance. The child classes inherit the features of the parent class. It allows code reusability and improves the readability of code.
+
+
+   ## Super keyword
    > use of super key word
 
       - To invoke parent class variable.
       - To invoke parent class method. 
       - To invoke parent class constructor.
-      
 
 
 
