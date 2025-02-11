@@ -50,3 +50,14 @@ An interface is a set of abstract methods you would want your class to implement
 • Since an interface can be thought of as a contract implemented by multiple
 classes, in certain cases, modifying the interface could lead to unpredictable
 behavior for the classes implementing them.
+
+
+## Method Overloading
+    Method overloading is a feature in programming languages like Java and C++ that allows defining multiple methods with the same name but different parameters within the same class
+
+> condition for overloading
+   
+   - methods should be of same name.
+   - different number of arguments.
+   - smae number of argument but different data types .
+   
