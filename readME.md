@@ -101,3 +101,12 @@ behavior for the classes implementing them.
 > Disadvantages of Polymorphism
 - Can make it more difficult to understand the behavior of an object, especially if the code is complex.
 - This may lead to performance issues, as polymorphic behavior may require additional computations at runtime.
+
+
+# Access Modifiers
+
+   ## Public 
+   
+   ## Private
+   ## Proteced
+   ## Default
