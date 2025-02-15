@@ -12,6 +12,8 @@ abstract class car{
 
     abstract public void fuelvalue();
 
+    
+
     public void color(){
         System.out.println("black");
     }
