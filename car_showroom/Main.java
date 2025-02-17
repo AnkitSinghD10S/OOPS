@@ -17,7 +17,6 @@ class Showrooms implements utility{
         System.out.println("Total Employees :"+total_employees);
         System.out.println("Manger Name :"+manager_name);
         System.out.println("Total Car In Stock :"+total_car_in_stock);
-
     }
 
     @Override
@@ -39,7 +38,7 @@ class Showrooms implements utility{
     
 }
 
-class Cars extends Showrooms implements utility{
+class Cars extends Showrooms {
     @Override
     public void add_default(){
         Scanner sc = new Scanner(System.in);
@@ -94,10 +93,11 @@ public class  Main{
         System.out.println();
         System.out.println("===================================***** ENTER 0 TO EXIT *******==================================");
 
-        Scanner sc = new Scanner(System.in);
-        int option = sc.nextInt();
-        if(option==1){
+        try (Scanner sc = new Scanner(System.in)) {
+            int option = sc.nextInt();
+            if (option == 1) {
 
+            }
         }
 
     
