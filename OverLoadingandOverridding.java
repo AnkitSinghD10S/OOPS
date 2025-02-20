@@ -16,15 +16,15 @@ public class OverLoadingandOverridding{
 
     public static void main(String[] args) {
         OverLoadingandOverridding o = new OverLoadingandOverridding();
-    //    System.out.println(
-    //        o.sum(10, 0)
-    //    );
-    //    System.out.println(
-    //        o.sum(19,9,1)
-    //    );
-    //    System.out.println(
-    //        o.sum("ankit","singh")
-    //    );
+    System.out.println(
+        o.sum(10, 0)
+    );
+    System.out.println(
+        o.sum(19,9,1)
+    );
+    System.out.println(
+        o.sum("ankit","singh")
+    );
 
         SBI bank1 = new SBI();
         PNB bank2 = new PNB();

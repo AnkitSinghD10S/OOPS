@@ -4,7 +4,7 @@ public class AccessModifiers {
         // s.name="ankit";
         // s.age=21;
         // s.roll_no=9;
-        // s.print();
+        s.print();
 
     }
 }

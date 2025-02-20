@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class ATM_MACHINE {
     public static void main(String[] args) {
         ATM o1 = new ATM();
+        System.out.println(o1.PIN);
     }
 }
 
