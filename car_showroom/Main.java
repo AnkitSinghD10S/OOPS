@@ -3,8 +3,6 @@ package car_showroom;
 import java.util.Scanner;
 import java.util.UUID;
 
-import javax.swing.text.StyledEditorKit;
-
 class Showrooms implements utility{
 
     String showroom_name;
@@ -26,16 +24,17 @@ class Showrooms implements utility{
     public void add_details() {
         Scanner sc = new Scanner(System.in);
         System.out.println("===================================***** Enter SHOWROOM DETAILS *******==================================");
-        System.out.println("Enter Showroom name :");
-        showroom_name=sc.nextLine();
-        System.out.println("Enter the address :");
-        address=sc.nextLine();
-        System.out.println("Enter total employees :");
-        total_employees=sc.nextInt();
-        System.out.println("Enter total cars in stock :");
-        total_car_in_stock = sc.nextInt();
-        System.out.println("Enter the manager name :");
+        System.out.println();
+        System.out.print("SHOWROOM NAME: ");
+        showroom_name = sc.nextLine();
+        System.out.print(("SHOWROOM ADDRESS: "));
+        address = sc.nextLine();
+        System.out.print("MANAGER NAME: ");
         manager_name = sc.nextLine();
+        System.out.print("TOTAL NO OF EMPLOYEES: ");
+        total_employees = sc.nextInt();
+        System.out.print("TOTAL CARS IN STOCK: ");
+        total_car_in_stock= sc.nextInt();
     }
     
 }
@@ -52,19 +51,21 @@ class Cars extends Showrooms {
     public void add_details(){
         Scanner sc = new Scanner(System.in);
         System.out.println("===================================***** Enter details *******==================================");
-        System.out.println("Enter the car name :");
-        car_name=sc.nextLine();
-        System.out.println("Enter color :");
-        car_color=sc.nextLine();
-        System.out.println("Enter car fuel type :");
-        car_fuel_type=sc.nextLine();
-        System.out.println("Enter the price of car :");
-        car_price=sc.nextInt();
-        System.out.println("Enter car type (SEDAN/SUV/HATCHBACK):");
-        car_type=sc.nextLine();
-        System.out.println("Enter the transmission (AUTOMATIC/MANUAL):");
-        car_name=sc.nextLine();
-        sc.close();
+        System.out.println();
+        System.out.print("CAR NAME: ");
+        car_name = sc.nextLine();
+        System.out.print(("CAR COLOR: "));
+        car_color = sc.nextLine();
+        System.out.print("CAR FUEL TYPE(PETROL/DIESEL): ");
+        car_fuel_type = sc.nextLine();
+        System.out.print("CAR PRICE: ");
+        car_price = sc.nextInt();
+        sc.nextLine();
+        System.out.print("CAR TYPE(SEDAN/SUV/HATCHBACK): ");
+        car_type = sc.nextLine();
+        System.out.print("TRANSMISSION TYPE(AUTOMATIC/MANUAL): ");
+        car_transmission = sc.nextLine();
+        total_car_in_stock++;
      }
     @Override
     public void get_details(){
@@ -95,13 +96,16 @@ class Employees extends Showrooms implements utility{
         UUID uuid = UUID.randomUUID();
         emp_id = String.valueOf(uuid);
         System.out.println("===================================***** Enter details *******==================================");
-        System.out.println("Enter the employess name:");
-        emp_name=sc.nextLine();
-        System.out.println("Enter the employess age :");
-        emp_age=sc.nextInt();
-        System.out.println("Enter the employess department :");
-        emp_department=sc.nextLine();
-        sc.close();
+        System.out.println();
+        System.out.print("EMPLOYEE NAME: ");
+        emp_name = sc.nextLine();
+        System.out.print(("EMPLOYEE AGE: "));
+        emp_age = sc.nextInt();
+        sc.nextLine();
+        System.out.print("EMPLOYEE DEPARTMENT: ");
+        emp_department = sc.nextLine();
+        System.out.print("SHOWROOM NAME: ");
+        showroom_name = sc.nextLine();
     }
     @Override
     public void get_details(){
@@ -185,11 +189,15 @@ public class  Main{
                         break;
 
                     case 4:
+                    if(showroom_counter!=0){
                         for(int i=0;i<showroom_counter;i++){
                             showroom[i].get_details();
                             System.out.println();
                             System.out.println();
                         }
+                    }else{
+                        System.out.println("No showroom exist ");
+                    }
                         System.out.println();
                         System.out.println("9 >. Go back to main menu ");
                         System.out.println("0 >. Exit");
@@ -197,11 +205,15 @@ public class  Main{
                         break;
 
                     case 5:
+                    if(employees_counter!=0){
                         for(int i=0;i<employees_counter;i++){
                             employees[i].get_details();
                             System.out.println();
                             System.out.println();
                         }
+                    }else{
+                        System.out.println("No employee exist ");
+                    }
                         System.out.println();
                         System.out.println("9 >. Go back to main menu ");
                         System.out.println("0 >. Exit ");
@@ -209,10 +221,14 @@ public class  Main{
                         break;
 
                     case 6:
-                        for(int i=0;i<car_counter;i++){
-                            cars[i].get_details();
-                            System.out.println();
-                            System.out.println();
+                        if(car_counter!=0){
+                            for(int i=0;i<car_counter;i++){
+                                cars[i].get_details();
+                                System.out.println();
+                                System.out.println();
+                            }
+                        }else{
+                            System.out.println("No cars exists ");
                         }
                         System.out.println();
                         System.out.println("9 >. Go back to main menu ");
@@ -222,6 +238,7 @@ public class  Main{
 
                     default:
                         System.out.println("Enter Valid Choice");
+                        choice=sc.nextInt();
                         break;
                 }
             }
