@@ -38,8 +38,10 @@ class FullTimeEmployee extends Employee{
     }
 }
 
-class Main {
+public class EmployeePayRoll {
     public static void main(String[] args) {
-
+        FullTimeEmployee fulltime[] = new FullTimeEmployee[5];
+        fulltime[0] = new FullTimeEmployee("ankit", 0, 100000000);
+        fulltime[0].calculateSalary();
     }
 }
