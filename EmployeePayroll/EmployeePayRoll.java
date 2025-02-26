@@ -38,10 +38,25 @@ class FullTimeEmployee extends Employee{
     }
 }
 
+class PartTimeEmployee extends Employee{
+    private int hoursworked;
+    private int hourlyRate;
+
+    public PartTimeEmployee(String name,int id, int hoursworked,int hourlyRate){
+        super(name, id);
+        this.hoursworked = hoursworked;
+        this.hourlyRate = hourlyRate;
+    }
+    @Override
+    double calculateSalary(){
+        return hourlyRate*hoursworked;
+    }
+}
+
 public class EmployeePayRoll {
     public static void main(String[] args) {
-        FullTimeEmployee fulltime[] = new FullTimeEmployee[5];
-        fulltime[0] = new FullTimeEmployee("ankit", 0, 100000000);
-        fulltime[0].calculateSalary();
+        // FullTimeEmployee fulltime[] = new FullTimeEmployee[5];
+        // fulltime[0] = new FullTimeEmployee("ankit", 0, 100000000);
+        // fulltime[0].calculateSalary();
     }
 }
