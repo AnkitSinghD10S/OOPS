@@ -1,3 +1,5 @@
+package employeepayroll;
+import java.util.*;
 
 abstract class Employee {
     private String name;
@@ -55,8 +57,46 @@ class PartTimeEmployee extends Employee{
 
 public class EmployeePayRoll {
     public static void main(String[] args) {
-        // FullTimeEmployee fulltime[] = new FullTimeEmployee[5];
-        // fulltime[0] = new FullTimeEmployee("ankit", 0, 100000000);
-        // fulltime[0].calculateSalary();
+        PayrollSystem payrollSystem = new PayrollSystem();
+        FullTimeEmployee fte1 = new FullTimeEmployee("John", 1, 5000);
+        FullTimeEmployee fte2 = new FullTimeEmployee("Mike", 2, 6000);
+        PartTimeEmployee pte1 = new PartTimeEmployee("Linda", 3, 20, 100);
+        PartTimeEmployee pte2 = new PartTimeEmployee("Linda", 4, 25, 150);
+        payrollSystem.addEmployee(fte1);
+        payrollSystem.addEmployee(fte2);
+        payrollSystem.addEmployee(pte1);
+        payrollSystem.addEmployee(pte2);
+        payrollSystem.displayAllEmployees();
     }
+}
+
+class PayrollSystem{
+     private List<Employee> employeeList = new ArrayList<Employee>();
+
+     public PayrollSystem(){
+        employeeList= new ArrayList<Employee>();
+     }
+
+     public void addEmployee(Employee employee){
+        employeeList.add(employee);
+     }
+
+     public void removeEmployee(int id){
+        Employee emp = null;
+        for(Employee e: employeeList){
+            if(e.getId()==id){
+                emp =e;
+                break;
+            }
+        }
+        if(emp!=null){
+            employeeList.remove(emp);
+        }
+     }
+
+     public void displayAllEmployees(){
+        for(Employee e: employeeList){
+            System.out.println(e);
+        }
+     }
 }
