@@ -66,6 +66,7 @@ public class EmployeePayRoll {
         payrollSystem.addEmployee(fte2);
         payrollSystem.addEmployee(pte1);
         payrollSystem.addEmployee(pte2);
+        payrollSystem.removeEmployee(1);
         payrollSystem.displayAllEmployees();
     }
 }
