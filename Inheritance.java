@@ -114,7 +114,7 @@ class Derived extends Base
         System.out.print("C");
     }
 
-    public void method()
+    public void methodTwo()
     {
         super.methodTwo();
         System.out.print("D");
